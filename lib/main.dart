@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/views/category_screen.dart';
+import 'package:meals_app/routes/routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                   fontFamily: "RobotoCondensed",
                   fontWeight: FontWeight.bold))),
-      home: const CategoryScreen(),
+      //home: const CategoryScreen(),
+      initialRoute: "/", // default is "/"
+      routes: Routes.getRoutes(context),
     );
   }
 }
